@@ -2,20 +2,11 @@
 {% load static %}
 
 {% block content %}
-<h1> Books </h1>
+<h1> Lazy Loading </h1>
 
-{% for book in books %}
-  <div class="row mb-4">
-    <div class="col-3">
-      <img src="{% static book.image %}" style="height: 150px; width: auto">
-    </div>
-    <div class="col">
-      <h2> {{book.title}} </h2>
-      <h4> {{book.last_name}}, {{book.first_name}} </h4>
-    </div>
-  </div>
-{% empty %}
-  <i> No books </i>
-{% endfor %}
+<div hx-get="/lazy_image/" hx-trigger="load">
+  Loading....... 
+</div>
+
 
 {% endblock content %}
