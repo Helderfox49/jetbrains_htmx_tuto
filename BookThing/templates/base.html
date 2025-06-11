@@ -9,8 +9,9 @@
     href="{% static 'css/bootstrap5_jbhtmxdemo.min.css' %}">
 
   <link rel="stylesheet" href="{% static 'css/jbhtmxdemo.css' %}">
-  <script src='https://unpkg.com/htmx.org@2.0.0' ></script>
-
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% comment %} <script src='https://unpkg.com/htmx.org@2.0.0' ></script> {% endcomment %}
+  <script src="{% static 'js/htmx.min.js' %}"></script>
   
 
   <title>BookThing {% if title %}: {{title}} {% endif %}</title>
